@@ -23,6 +23,10 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(VENDOR_PATH)/system/lib6
 PRODUCT_PACKAGES += \
     MiuiCamera
 
+# Privapp permissions
+PRODUCT_COPY_FILES += \
+    vendor/MiuiCamera/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
+
 # MiuiCamera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.shutter_sound.blacklist=com.android.camera
